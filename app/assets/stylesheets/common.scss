@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    width: 100%;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 50px;
+    border: hidden;
+    background-color: #cc2020;
+    color: #fff;
+  }
+  
+  footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px 10px 15px 10px;
+    margin-top: 50px;
+    border: hidden;
+    background-color: #cc2020;
+    color: #fff;
+  }
+
+.container {
+      position: relative;
+      padding-bottom: 150px;
+      box-sizing: border-box;
+      min-height: 100vh;
+}
+  
+  table th {
+    background-color: #fbc25b;
+    padding: 10px 20px;
+  }
+   
+  table td {
+    background-color: #f9ecd5;
+    padding: 10px 20px;
+  }
+   
+  .notice {
+    background-color: #ccf;
+    padding: 5px;
+  }
+  
+  .posts-content {
+    width: 350px;
+    height: 200px;
+  }
