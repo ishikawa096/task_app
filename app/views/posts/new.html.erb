@@ -1,40 +1,43 @@
 <main>
-<h3>スケジュール新規作成</h3>
+  <h3>スケジュール新規作成</h3>
 
-<%= render "shared/error", obj:@post %>
+  <% if flash[:notice_green] %>
+    <p class="notice notice-green"><%= flash[:notice_green]%></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice]%></p>
+  <% end %>
 
-<%= form_with model: @post do|f| %>
-  <table>
-    <tr>
-      <th><%= f.label :title ,"タイトル" %></th>
-      <td><%= f.text_field :title ,class:"post-detail" %></td>
-    </tr>
+  <%= render "shared/error", obj:@post %>
 
-    <tr>
-      <th><%= f.label :start_date ,"開始日" %></th>
-      <td><%= f.date_field :start_date ,class:"post-detail" %></td>
-    </tr>
-
-    <tr>
-      <th><%= f.label :end_date ,"終了日" %></th>
-      <td><%= f.date_field :end_date ,class:"post-detail" %></td>
-    </tr>
-
-    <tr>
-      <th><%= f.label :allday ,"終日" %></th>
-      <td><%= f.check_box :allday, {}, "true", "false" %><p>終日の場合はチェックを入れます</p></td>
-    </tr>
-    <tr>
-    <th><%= f.label :memo ,"スケジュールメモ" %></th>
-    <td><%= f.text_area :memo ,class:"post-content" %></td>
-  </tr>
-  </table>
-
-  <div>
-    <ul>
-      <li><%= f.submit "スケジュールを新規登録する" ,class:"submit-button" %></li>
-      <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
-    </ul>
-  </div>
-<% end %>
+  <%= form_with model: @post do |f| %>
+    <table>
+      <tr>
+        <th><%= f.label :title ,"タイトル" %></th>
+        <td><%= f.text_field :title ,class:"post-detail" %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :start_date ,"開始日" %></th>
+        <td><%= f.date_field :start_date ,class:"post-detail" %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :end_date ,"終了日" %></th>
+        <td><%= f.date_field :end_date ,class:"post-detail" %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :allday ,"終日" %></th>
+        <td><%= f.check_box :allday, {}, "true", "false" %><p>終日の場合はチェックを入れます</p></td>
+      </tr>
+      <tr>
+        <th><%= f.label :memo ,"スケジュールメモ" %></th>
+        <td><%= f.text_area :memo ,class:"post-content" %></td>
+      </tr>
+    </table>
+    <div>
+      <ul>
+        <li><%= f.submit "スケジュールを新規登録する" ,class:"submit-button" %></li>
+        <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+      </ul>
+    </div>
+  <% end %>
 </main>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all 
+    @posts = Post.order(:start_date)
   end
 
   def new
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params.require(:post).permit(:title, :start_date, :end_date, :allday, :memo))
     if @post.save
-      flash[:notice] = "スケジュールを登録しました"
+      flash[:notice_green] = "スケジュールを登録しました"
       redirect_to :posts
     else
       flash.now[:notice] = "スケジュールを登録できませんでした"
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(params.require(:post).permit(:title, :start_date, :end_date, :allday, :memo))
-      flash[:notice] = "スケジュールを更新しました"
+      flash[:notice_green] = "スケジュールを更新しました"
       redirect_to :posts
     else
       flash.now[:notice] = "スケジュールを更新できませんでした"
