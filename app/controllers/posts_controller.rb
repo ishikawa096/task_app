@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post).permit(:title, :startdate, :enddate, :allday, :memo))
+    @post = Post.new(params.require(:post).permit(:title, :start_date, :end_date, :allday, :memo))
     if @post.save
       flash[:notice] = "スケジュールを新規登録しました"
       redirect_to :posts
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update(params.require(:post).permit(:title, :startdate, :enddate, :allday, :memo))
+    if @post.update(params.require(:post).permit(:title, :start_date, :end_date, :allday, :memo))
       flash[:notice] = "スケジュールを更新しました"
       redirect_to :posts
     else
