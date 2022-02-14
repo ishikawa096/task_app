@@ -1,0 +1,103 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+p {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #cc2020;
+  color: #fff;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 15px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+}
+
+h3 {
+  display: block;
+  font-size: 1.5em;
+}
+
+table {
+  display: block;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 15px;
+}
+  
+table th, tr, td {
+  border: 1px solid #000;
+  background-color: #ffdcdc;
+  padding: 10px 20px;
+}
+   
+table td {
+  background-color: #fcecec;
+}
+
+ul {
+  margin: 0px 0px 15px 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.submit-button {
+  font-size: 15px;
+  padding: 5px;
+}
+   
+.notice {
+  width: 400px;
+  text-align: center;
+  background-color: rgb(248, 198, 211);
+  border: 2px solid rgb(228, 133, 153);
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.notice-green {
+  background-color: rgb(198, 248, 208);
+  border: 2px solid rgb(91, 226, 136);
+}
+
+.post-detail {
+  width: 350px;
+  height: 30px;
+  font-size: 18px;
+} 
+
+.post-content {
+  width: 350px;
+  height: 200px;
+}
