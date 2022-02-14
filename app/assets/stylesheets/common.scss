@@ -1,51 +1,90 @@
 body {
     margin: 0px;
     padding: 0px;
+    width: 100vw;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
-header {
+p {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, footer {
     width: 100%;
-    padding: 15px 10px 15px 10px;
-    margin-bottom: 50px;
-    border: hidden;
+    padding: 10px;
     background-color: #cc2020;
     color: #fff;
-  }
-  
-  footer{
-    width: 100%;
+}
+
+footer {
     position: absolute;
-    bottom: 0;
-    padding: 15px 10px 15px 10px;
-    margin-top: 50px;
-    border: hidden;
-    background-color: #cc2020;
-    color: #fff;
-  }
+    bottom: 0px;
+}
 
-.container {
-      position: relative;
-      padding-bottom: 150px;
-      box-sizing: border-box;
-      min-height: 100vh;
+h1 {
+  display: block;
+  font-size: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 15px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.5em;
+}
+
+table {
+  display: block;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 15px;
 }
   
-  table th {
-    background-color: #fbc25b;
-    padding: 10px 20px;
-  }
+table th, tr, td {
+  border: 1px solid #000;
+  background-color: #ffdcdc;
+  padding: 10px 20px;
+}
    
-  table td {
-    background-color: #f9ecd5;
-    padding: 10px 20px;
-  }
+table td {
+  background-color: #fcecec;
+}
+
+li {
+  list-style: none;
+}
+
+.submit-button {
+  font-size: 15px;
+  padding: 5px;
+}
    
-  .notice {
-    background-color: #ccf;
-    padding: 5px;
-  }
-  
-  .posts-content {
-    width: 350px;
-    height: 200px;
-  }
+.notice {
+  background-color: #ccf;
+  padding: 5px;
+}
+
+.post-detail {
+  width: 350px;
+  height: 30px;
+  font-size: 18px;
+} 
+
+.post-content {
+  width: 350px;
+  height: 200px;
+}

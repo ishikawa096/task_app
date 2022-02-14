@@ -10,9 +10,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params.require(:post).permit(:title, :start_date, :end_date, :allday, :memo))
     if @post.save
-      flash[:notice] = "スケジュールを新規登録しました"
+      flash[:notice] = "スケジュールを登録しました"
       redirect_to :posts
     else
+      flash.now[:notice] = "スケジュールを登録できませんでした"
       render "new"
     end
   end
@@ -31,6 +32,7 @@ class PostsController < ApplicationController
       flash[:notice] = "スケジュールを更新しました"
       redirect_to :posts
     else
+      flash.now[:notice] = "スケジュールを更新できませんでした"
       render "edit"
     end
   end
